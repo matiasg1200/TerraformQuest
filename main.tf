@@ -51,7 +51,7 @@ provider "google" {
 #Task7
 #resource "google_compute_firewall" "tf-firewall" {
 #  name    = "tf-firewall"
-#  network = "projects/<PROJECT_ID>/global/networks/<NETWORK_NAME>"
+#  network = "<NETWORK_NAME>"
 #  allow {
 #    protocol = "tcp"
 #    ports    = ["80"]
