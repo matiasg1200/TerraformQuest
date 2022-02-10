@@ -1,7 +1,7 @@
 terraform {
   #task3
   #backend "gcs" { 
-  #  bucket = "tf-bucket-874969" 
+  #  bucket = "" 
   #  prefix = "terraform/state" 
   #  }  
   required_providers {
