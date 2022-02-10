@@ -38,9 +38,6 @@ resource "google_compute_instance" "tf-instance-2" {
 #  name         = "tf-instance-"
 #  machine_type = "n1-standard-2"
 #  zone         = var.zone
-#  metadata_startup_script = <<-EOT
-#        #!/bin/bash
-#    EOT
 #  allow_stopping_for_update = true
 #  boot_disk {
 #    initialize_params {
@@ -49,7 +46,5 @@ resource "google_compute_instance" "tf-instance-2" {
 #  }
 #  network_interface {
 #    network = "default"
-#    access_config {
-#    }
 #  }
 #}
