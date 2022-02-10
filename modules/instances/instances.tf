@@ -13,9 +13,10 @@ resource "google_compute_instance" "tf-instance-1" {
     }
   }
   network_interface {
-    network = "tf-vpc-587726"
+    network = "default"
+    #Task6
+    #subnetwork = "subnet-01"
     access_config {
-      subnet = "subnet-01"
     }
   }
 }
@@ -35,8 +36,9 @@ resource "google_compute_instance" "tf-instance-2" {
     }
   }
   network_interface {
-    network = "tf-vpc-587726"
-    subnet = "subnet-02"
+    network = "default"
+    #Task6
+    #subnetwork = "subnet-02"
     access_config {
     }
   }
@@ -45,7 +47,7 @@ resource "google_compute_instance" "tf-instance-2" {
 #Task4
 #resource "google_compute_instance" "tf-instance-" {
 #  project      = var.project_id
-#  name         = "tf-instance-2"
+#  name         = "tf-instance-"
 #  machine_type = "n1-standard-2"
 #  zone         = var.zone
 #  metadata_startup_script = <<-EOT
