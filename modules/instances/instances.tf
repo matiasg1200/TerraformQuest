@@ -1,34 +1,24 @@
-resource "google_compute_instance" "tf-instance-1" {
-  project      = var.project_id
-  name         = "tf-instance-1"
-  machine_type = "n1-standard-1"
-  zone         = var.zone
-  metadata_startup_script = <<-EOT
-        #!/bin/bash
-    EOT
-  allow_stopping_for_update = true
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-10"
+resource "google_compute_instance" "tf-instance-1" { 
+    name         = "tf-instance-1" 
+    machine_type = "n1-standard-2" 
+    zone         = var.zone
+    allow_stopping_for_update = true
+    boot_disk { 
+      initialize_params { 
+        image = "debian-cloud/debian-10" 
+      } 
     }
-  }
-  network_interface {
-    network = "default"
-    #Task6
-    #subnetwork = "subnet-01"
-    access_config {
-    }
-  }
+    network_interface { 
+      network    = "default"
+      #Task6
+      #subnetwork = "subnet-01" 
+    } 
 }
 
 resource "google_compute_instance" "tf-instance-2" {
-  project      = var.project_id
   name         = "tf-instance-2"
   machine_type = "n1-standard-1"
   zone         = var.zone
-  metadata_startup_script = <<-EOT
-        #!/bin/bash
-    EOT
   allow_stopping_for_update = true
   boot_disk {
     initialize_params {
@@ -39,8 +29,6 @@ resource "google_compute_instance" "tf-instance-2" {
     network = "default"
     #Task6
     #subnetwork = "subnet-02"
-    access_config {
-    }
   }
 }
 
