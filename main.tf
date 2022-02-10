@@ -16,13 +16,15 @@ provider "google" {
   zone    = var.zone
 }
 
-module "instances" {
-    source = "./modules/instances"
-}
+#Task2
+#module "instances" {
+#    source = "./modules/instances"
+#}
 
-module "storage" {
-    source = "./modules/storage"
-}
+#Task3
+#module "storage" {
+#    source = "./modules/storage"
+#}
 
 #Task6
 #module "network" {
